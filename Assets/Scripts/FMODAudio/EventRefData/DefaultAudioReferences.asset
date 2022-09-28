@@ -21,3 +21,5 @@ MonoBehaviour:
       Data4: -728773728
     Path: event:/LevelMusic
   playerJumpEventName: Jump
+  origamiCollectedEventName: Confeti
+  trampolineBounceEventName: TrampolineBounce

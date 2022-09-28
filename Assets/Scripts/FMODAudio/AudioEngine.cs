@@ -18,6 +18,8 @@ public class AudioEngine : MonoBehaviour
         AudioEventSystem.StartListening("StartGameMusic", StartGameMusic);
         AudioEventSystem.StartListening("StopGameMusic", StopGameMusic);
         AudioEventSystem.StartListening("PlayerJump", PlayerJump);
+        AudioEventSystem.StartListening("OrigamiCollected", OrigamiCollected);
+        AudioEventSystem.StartListening("TrampolineBounce", TrampolineBounce);
 
 
     }
@@ -29,6 +31,8 @@ public class AudioEngine : MonoBehaviour
         AudioEventSystem.StopListening("StartGameMusic", StartGameMusic);
         AudioEventSystem.StopListening("StopGameMusic", StopGameMusic);
         AudioEventSystem.StopListening("PlayerJump", PlayerJump);
+        AudioEventSystem.StopListening("OrigamiCollected", OrigamiCollected);
+        AudioEventSystem.StopListening("TrampolineBounce", TrampolineBounce);
 
     }
 
@@ -51,5 +55,19 @@ public class AudioEngine : MonoBehaviour
         fmodEventReferences.PlayerJumpInstance();
         fmodEventReferences.playerJumpEventInstance.start();
         fmodEventReferences.playerJumpEventInstance.release();
+    }
+
+    private void OrigamiCollected(GameObject triggerObject)
+    {
+        fmodEventReferences.OrigamiCollectedInstance();
+        fmodEventReferences.origamiCollectedInstance.start();
+        fmodEventReferences.origamiCollectedInstance.release();
+    }
+
+    private void TrampolineBounce(GameObject triggerObject)
+    {
+        fmodEventReferences.TrampolineBounceInstance();
+        fmodEventReferences.trampolineBounceInstance.start();
+        fmodEventReferences.trampolineBounceInstance.release();
     }
 }

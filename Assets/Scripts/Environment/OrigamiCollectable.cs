@@ -20,6 +20,7 @@ public class OrigamiCollectable : MonoBehaviour
             Instantiate(confetti, this.transform.position, Quaternion.identity);
             CollectableManager.Instance.GetCollectable();
             this.gameObject.SetActive(false);
+            AudioEventSystem.TriggerEvent("OrigamiCollected", this.gameObject);
         }
     }
 }

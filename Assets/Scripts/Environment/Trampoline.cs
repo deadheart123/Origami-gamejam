@@ -12,6 +12,7 @@ public class Trampoline : MonoBehaviour
         if(ccs != null)
         {
             other.GetComponent<CharacterControllerScript>().Bounce(bounceForce);
+            AudioEventSystem.TriggerEvent("TrampolineBounce", this.gameObject);
         }
     }
 }

@@ -19,6 +19,12 @@ public class FmodEventReferences : ScriptableObject
     [SerializeField] private string playerJumpEventName = null;
     public FMOD.Studio.EventInstance playerJumpEventInstance;
 
+    [SerializeField] private string origamiCollectedEventName = null;
+    public FMOD.Studio.EventInstance origamiCollectedInstance;
+    
+    [SerializeField] private string trampolineBounceEventName = null;
+    public FMOD.Studio.EventInstance trampolineBounceInstance;
+
     public void MusicInstance()
     {
         musicInstance = FMODUnity.RuntimeManager.CreateInstance(musicFmodEvent);
@@ -29,6 +35,16 @@ public class FmodEventReferences : ScriptableObject
     {
         playerJumpEventInstance = FMODUnity.RuntimeManager.CreateInstance("event:/" + playerJumpEventName);
         Debug.Log(playerJumpEventName);
+    }
+
+    public void OrigamiCollectedInstance()
+    {
+        origamiCollectedInstance = FMODUnity.RuntimeManager.CreateInstance("event:/" + origamiCollectedEventName);
+    }
+
+    public void TrampolineBounceInstance()
+    {
+        trampolineBounceInstance = FMODUnity.RuntimeManager.CreateInstance("event:/" + trampolineBounceEventName);
     }
 
 }
