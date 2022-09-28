@@ -8,12 +8,14 @@ public class RainCollider : MonoBehaviour
     {
         if (collider.gameObject.CompareTag("Player"))
         {
+            AudioEventSystem.TriggerEvent("RainDropHitPlayer", this.gameObject);
             Destroy(collider.gameObject);
             Destroy(this.gameObject);
         }
 
         else
         {
+            AudioEventSystem.TriggerEvent("RainDrop", this.gameObject);
             Destroy(this.gameObject);
         }
         

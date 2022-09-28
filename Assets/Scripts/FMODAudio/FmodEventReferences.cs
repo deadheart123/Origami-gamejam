@@ -25,6 +25,15 @@ public class FmodEventReferences : ScriptableObject
     [SerializeField] private string trampolineBounceEventName = null;
     public FMOD.Studio.EventInstance trampolineBounceInstance;
 
+    //Setting inspector heading
+    [Header("Environmental Audio")]
+    [SerializeField] private string rainDropEventName = null;
+    public FMOD.Studio.EventInstance rainDropEventInstance;
+
+
+    [SerializeField] private string rainHitPlayerEventName = null;
+    public FMOD.Studio.EventInstance rainHitPlayerEventInstance;
+
     public void MusicInstance()
     {
         musicInstance = FMODUnity.RuntimeManager.CreateInstance(musicFmodEvent);
@@ -45,6 +54,16 @@ public class FmodEventReferences : ScriptableObject
     public void TrampolineBounceInstance()
     {
         trampolineBounceInstance = FMODUnity.RuntimeManager.CreateInstance("event:/" + trampolineBounceEventName);
+    }
+
+    public void RainDropInstance()
+    {
+        rainDropEventInstance = FMODUnity.RuntimeManager.CreateInstance("event:/" + rainDropEventName);
+    }
+
+    public void RainHitPlayerInstance()
+    {
+        rainHitPlayerEventInstance = FMODUnity.RuntimeManager.CreateInstance("event:/" + rainHitPlayerEventName);
     }
 
 }

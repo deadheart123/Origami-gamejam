@@ -23,3 +23,5 @@ MonoBehaviour:
   playerJumpEventName: Jump
   origamiCollectedEventName: Confeti
   trampolineBounceEventName: TrampolineBounce
+  rainDropEventName: RainDrop
+  rainHitPlayerEventName: RainDropHitPlayer

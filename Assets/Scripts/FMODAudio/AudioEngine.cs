@@ -20,6 +20,8 @@ public class AudioEngine : MonoBehaviour
         AudioEventSystem.StartListening("PlayerJump", PlayerJump);
         AudioEventSystem.StartListening("OrigamiCollected", OrigamiCollected);
         AudioEventSystem.StartListening("TrampolineBounce", TrampolineBounce);
+        AudioEventSystem.StartListening("RainDrop", RainDrop);
+        AudioEventSystem.StartListening("RainDropHitPlayer", RainDropHitPlayer);
 
 
     }
@@ -33,6 +35,8 @@ public class AudioEngine : MonoBehaviour
         AudioEventSystem.StopListening("PlayerJump", PlayerJump);
         AudioEventSystem.StopListening("OrigamiCollected", OrigamiCollected);
         AudioEventSystem.StopListening("TrampolineBounce", TrampolineBounce);
+        AudioEventSystem.StopListening("RainDrop", RainDrop);
+        AudioEventSystem.StopListening("RainDropHitPlayer", RainDropHitPlayer);
 
     }
 
@@ -70,4 +74,20 @@ public class AudioEngine : MonoBehaviour
         fmodEventReferences.trampolineBounceInstance.start();
         fmodEventReferences.trampolineBounceInstance.release();
     }
+
+    private void RainDrop(GameObject triggerObject)
+    {
+
+        fmodEventReferences.RainDropInstance();
+        fmodEventReferences.rainDropEventInstance.start();
+        fmodEventReferences.rainDropEventInstance.release();
+    }
+
+    private void RainDropHitPlayer(GameObject triggerObject)
+    {
+        fmodEventReferences.RainHitPlayerInstance();
+        fmodEventReferences.rainHitPlayerEventInstance.start();
+        fmodEventReferences.rainHitPlayerEventInstance.release();
+    }
+
 }

@@ -69,7 +69,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD Project/Build/Desktop/Master.bank
   Name: Build/Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637999039401629596
+  lastModified: 637999855088983949
   FileSizes: []
   Exists: 1
 --- !u!114 &-677377980953922767
@@ -87,10 +87,10 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD Project/Build/Desktop/Master.strings.bank
   Name: Build/Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637999039401650127
+  lastModified: 637999855089014859
   FileSizes:
   - Name: 
-    Value: 1042
+    Value: 1132
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -114,12 +114,14 @@ MonoBehaviour:
   - {fileID: 173596304710404503}
   - {fileID: -8356265189945434246}
   - {fileID: 3356600906216004846}
+  - {fileID: 7717486695653236979}
+  - {fileID: 1505616713375876701}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2068552788536288964}
   StringsBanks:
   - {fileID: -677377980953922767}
-  cacheTime: 637999039401650127
+  cacheTime: 637999855089014859
   cacheVersion: 131592
 --- !u!114 &173596304710404503
 MonoBehaviour:
@@ -175,6 +177,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2327
+--- !u!114 &1505616713375876701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/RainDropHitPlayer
+  m_EditorClassIdentifier: 
+  Path: event:/RainDropHitPlayer
+  Guid:
+    Data1: -1069236338
+    Data2: 1093926274
+    Data3: -1706547277
+    Data4: 664125144
+  Banks:
+  - {fileID: -2068552788536288964}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4000
 --- !u!114 &3356600906216004846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,3 +283,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 132307
+--- !u!114 &7717486695653236979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/RainDrop
+  m_EditorClassIdentifier: 
+  Path: event:/RainDrop
+  Guid:
+    Data1: -2097163977
+    Data2: 1149517227
+    Data3: -644046685
+    Data4: -562792400
+  Banks:
+  - {fileID: -2068552788536288964}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7000

@@ -631,6 +631,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &572171990 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3330110518470632237, guid: 56237993feb724944a3a2e38bcc3a370, type: 3}
+  m_PrefabInstance: {fileID: 1842605401}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &585645392
 GameObject:
   m_ObjectHideFlags: 0
@@ -1634,8 +1639,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1685791293}
   - component: {fileID: 1685791290}
-  - component: {fileID: 1685791292}
   - component: {fileID: 1685791291}
+  - component: {fileID: 1685791294}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1720,14 +1725,6 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!81 &1685791292
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1685791289}
-  m_Enabled: 1
 --- !u!4 &1685791293
 Transform:
   m_ObjectHideFlags: 0
@@ -1743,6 +1740,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1685791294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685791289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 572171990}
 --- !u!1 &1686100538
 GameObject:
   m_ObjectHideFlags: 0
@@ -2331,15 +2341,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3297214805130811630, guid: bf8f9de50748a464cb6e613d7f88cacb, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.07437623
+      value: 0.074376225
       objectReference: {fileID: 0}
     - target: {fileID: 3297214805130811630, guid: bf8f9de50748a464cb6e613d7f88cacb, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.00000000428968
+      value: 0.000000004289682
       objectReference: {fileID: 0}
     - target: {fileID: 3297214805130811630, guid: bf8f9de50748a464cb6e613d7f88cacb, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 3.1993638e-10
+      value: -3.199365e-10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
