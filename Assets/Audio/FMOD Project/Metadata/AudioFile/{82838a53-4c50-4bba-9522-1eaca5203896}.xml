@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{82838a53-4c50-4bba-9522-1eaca5203896}">
+		<property name="assetPath">
+			<value>ConfetiPop2-001.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.29585416666666664</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f3557c8a-4392-4dab-a48b-b3f1b976ff1b}</destination>
+		</relationship>
+	</object>
+</objects>

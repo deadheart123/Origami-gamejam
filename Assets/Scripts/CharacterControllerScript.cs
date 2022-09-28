@@ -102,6 +102,7 @@ public class CharacterControllerScript : MonoBehaviour
             isGrounded = false;
             velocity.y = 0;
             velocity.y += Mathf.Sqrt(JumpHeight * -2f * Physics.gravity.y);
+            AudioEventSystem.TriggerEvent("PlayerJump", this.gameObject); //Trigger playerJump audio event
         }
     }
 

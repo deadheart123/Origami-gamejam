@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: SlowPlatform
   m_EditorClassIdentifier: 
   movementSpeed: 1
-  rotationSpeed: 20
+  rotationSpeed: 60

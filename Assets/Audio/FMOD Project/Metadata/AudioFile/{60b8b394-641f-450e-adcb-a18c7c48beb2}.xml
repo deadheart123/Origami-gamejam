@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{60b8b394-641f-450e-adcb-a18c7c48beb2}">
+		<property name="assetPath">
+			<value>PaperJump1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.0191249999999998</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f3557c8a-4392-4dab-a48b-b3f1b976ff1b}</destination>
+		</relationship>
+	</object>
+</objects>
