@@ -38,6 +38,9 @@ public class CharacterControllerScript : MonoBehaviour
 
         playerInputActions.Player.Interact.performed += Interact;
         playerInputActions.Player.Interact.Enable();
+
+        playerInputActions.Player.Pause.performed += Pause;
+        playerInputActions.Player.Pause.Enable();
     }
 
     private void OnDisable()
@@ -102,6 +105,12 @@ public class CharacterControllerScript : MonoBehaviour
         }
     }
 
+    public void Bounce(float launchForce)
+    {
+        velocity.y = 0;
+        velocity.y += Mathf.Sqrt(launchForce * -2f * Physics.gravity.y);
+    }
+
     private void Interact(InputAction.CallbackContext obj)
     {
         Debug.Log("Interact");
@@ -109,14 +118,17 @@ public class CharacterControllerScript : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Move();
         GroundCheck();
         Gravity();
-
-        Move();
     }
 
     void Update()
     {
-        
+    }
+
+    private void Pause(InputAction.CallbackContext obj)
+    {
+        Debug.Log("PAUSE");
     }
 }
