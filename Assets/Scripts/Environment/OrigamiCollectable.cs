@@ -23,6 +23,7 @@ public class OrigamiCollectable : MonoBehaviour
             CollectableManager.Instance.GetCollectable();
             this.gameObject.SetActive(false);*/
             AudioEventSystem.TriggerEvent("OrigamiCollected", this.gameObject);
+            AudioEventSystem.TriggerEvent("StopGameMusic", this.gameObject); //Multiple music starts playing when origarmi collected, so whacked this in here, for now
             // Teleport to new level
             SceneManager.LoadScene(loadSceneIndex);
         }
