@@ -99,6 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   confetti: {fileID: 418910797408679012, guid: 03239222d52278a4dbea1a834cd47f80, type: 3}
   bounceTime: 1
+  loadSceneIndex: 0
 --- !u!65 &4564647150313262949
 BoxCollider:
   m_ObjectHideFlags: 0

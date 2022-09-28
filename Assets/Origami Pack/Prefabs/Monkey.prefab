@@ -27,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1598459088720226}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   confetti: {fileID: 418910797408679012, guid: 03239222d52278a4dbea1a834cd47f80, type: 3}
   bounceTime: 1
+  loadSceneIndex: 0
 --- !u!65 &5715588654054782019
 BoxCollider:
   m_ObjectHideFlags: 0
