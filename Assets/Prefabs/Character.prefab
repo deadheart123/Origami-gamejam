@@ -171,6 +171,7 @@ GameObject:
   - component: {fileID: 3330110518470632238}
   - component: {fileID: 3330110518470632239}
   - component: {fileID: 935774516}
+  - component: {fileID: 3613267506978275924}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -208,11 +209,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50165652adf6bc4419dd551f3cae69d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerFootsteps: {fileID: 3613267506978275924}
   speed: 7.5
+  velocity: {x: 0, y: 0, z: 0}
+  isGrounded: 1
   groundCheckObject: {fileID: 3330110517531191940}
   JumpHeight: 1
   gravityMultiplier: 1.8
-  mainCamera: {fileID: 0}
 --- !u!143 &3330110518470632239
 CharacterController:
   m_ObjectHideFlags: 0
@@ -245,3 +248,17 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &3613267506978275924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3330110518470632237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10479032333853e4b8795438d979db52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentTerrain: 0
+  footstepSpeed: 0.3
