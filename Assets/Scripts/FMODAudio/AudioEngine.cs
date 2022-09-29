@@ -6,10 +6,14 @@ using UnityEngine.Events;
 public class AudioEngine : MonoBehaviour
 {
     [SerializeField] private FmodEventReferences fmodEventReferences;
+    [SerializeField] private FmodParameters fmodParameters;
+    private int origamiCollected = 0;
+    
 
     void Start()
     {
         StartGameMusic(this.gameObject);
+       
     }
     //Start listening for events
     void OnEnable()
@@ -72,6 +76,9 @@ public class AudioEngine : MonoBehaviour
         fmodEventReferences.OrigamiCollectedInstance();
         fmodEventReferences.origamiCollectedInstance.start();
         fmodEventReferences.origamiCollectedInstance.release();
+        origamiCollected = origamiCollected + 1;
+        fmodParameters.SetParamByName<int>(fmodEventReferences.musicInstance, "OrigamiCollected", origamiCollected);
+        Debug.Log("Origami" + origamiCollected);
     }
 
     private void TrampolineBounce(GameObject triggerObject)

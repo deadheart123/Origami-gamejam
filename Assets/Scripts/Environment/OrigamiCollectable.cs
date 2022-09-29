@@ -28,7 +28,7 @@ public class OrigamiCollectable : MonoBehaviour
         {
             Instantiate(confetti, this.transform.position, Quaternion.identity);
             AudioEventSystem.TriggerEvent("OrigamiCollected", this.gameObject);
-            AudioEventSystem.TriggerEvent("StopGameMusic", this.gameObject); //Multiple music starts playing when origarmi collected, so whacked this in here, for now
+           // AudioEventSystem.TriggerEvent("StopGameMusic", this.gameObject); //Multiple music starts playing when origarmi collected, so whacked this in here, for now
             this.gameObject.SetActive(false);
 
             if(loadLevel == LoadLevel.SUB)

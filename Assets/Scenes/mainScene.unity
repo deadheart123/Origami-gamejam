@@ -35594,6 +35594,7 @@ GameObject:
   - component: {fileID: 1248635404}
   - component: {fileID: 1248635406}
   - component: {fileID: 1248635405}
+  - component: {fileID: 1248635409}
   - component: {fileID: 1248635407}
   - component: {fileID: 1248635408}
   m_Layer: 0
@@ -35631,6 +35632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fmodEventReferences: {fileID: 11400000, guid: a96041e93156f4548a3b17b0194f1b26, type: 2}
+  fmodParameters: {fileID: 1248635409}
 --- !u!114 &1248635406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35703,6 +35705,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c4ead135cfbb9444891ba08b607b544c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1248635409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248635402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cf113eb3ef44e741b4c3c72bece6556, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1248691913 stripped
