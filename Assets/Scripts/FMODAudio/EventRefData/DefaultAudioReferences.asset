@@ -23,5 +23,14 @@ MonoBehaviour:
   playerJumpEventName: Jump
   origamiCollectedEventName: Confeti
   trampolineBounceEventName: TrampolineBounce
+  playerDisintegratedEventName: DisintegratePlayer
   rainDropEventName: RainDrop
   rainHitPlayerEventName: RainDropHitPlayer
+  fireStreamEventName: FireStream
+  fireStreamFmodEvent:
+    Guid:
+      Data1: -2124693255
+      Data2: 1268162203
+      Data3: 2076549765
+      Data4: -1184967179
+    Path: event:/FireStream

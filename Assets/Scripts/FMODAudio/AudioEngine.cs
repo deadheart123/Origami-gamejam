@@ -22,6 +22,9 @@ public class AudioEngine : MonoBehaviour
         AudioEventSystem.StartListening("TrampolineBounce", TrampolineBounce);
         AudioEventSystem.StartListening("RainDrop", RainDrop);
         AudioEventSystem.StartListening("RainDropHitPlayer", RainDropHitPlayer);
+        AudioEventSystem.StartListening("StartFireStream", StartFireStream);
+        AudioEventSystem.StartListening("StopFireStream", StopFireStream);
+        AudioEventSystem.StartListening("PlayerDisintegrated", PlayerDisintegrated);
 
 
     }
@@ -37,6 +40,9 @@ public class AudioEngine : MonoBehaviour
         AudioEventSystem.StopListening("TrampolineBounce", TrampolineBounce);
         AudioEventSystem.StopListening("RainDrop", RainDrop);
         AudioEventSystem.StopListening("RainDropHitPlayer", RainDropHitPlayer);
+        AudioEventSystem.StopListening("StartFireStream", StartFireStream);
+        AudioEventSystem.StopListening("StopFireStream", StopFireStream);
+        AudioEventSystem.StopListening("PlayerDisintegrated", PlayerDisintegrated);
 
     }
 
@@ -88,6 +94,26 @@ public class AudioEngine : MonoBehaviour
         fmodEventReferences.RainHitPlayerInstance();
         fmodEventReferences.rainHitPlayerEventInstance.start();
         fmodEventReferences.rainHitPlayerEventInstance.release();
+    }
+
+    private void StartFireStream(GameObject triggerObject)
+    {
+        fmodEventReferences.FireStreamInstance();
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(fmodEventReferences.fireStreamInstance, triggerObject.GetComponent<Transform>(), triggerObject.GetComponent<Rigidbody>());
+        fmodEventReferences.fireStreamInstance.start();
+    }
+
+    private void StopFireStream(GameObject triggerObject)
+    {
+        fmodEventReferences.fireStreamInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        fmodEventReferences.fireStreamInstance.release();
+    }
+
+    private void PlayerDisintegrated(GameObject triggerObject)
+    {
+        fmodEventReferences.PlayerDisintegratedInstance();
+        fmodEventReferences.playerDisintegratedEventInstance.start();
+        fmodEventReferences.playerDisintegratedEventInstance.release();
     }
 
 }

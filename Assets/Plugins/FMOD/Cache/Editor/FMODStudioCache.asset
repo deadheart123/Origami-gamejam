@@ -54,6 +54,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-4717175592945247405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FireStream
+  m_EditorClassIdentifier: 
+  Path: event:/FireStream
+  Guid:
+    Data1: -2124693255
+    Data2: 1268162203
+    Data3: 2076549765
+    Data4: -1184967179
+  Banks:
+  - {fileID: -2068552788536288964}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 93104
 --- !u!114 &-2068552788536288964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,7 +96,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD Project/Build/Desktop/Master.bank
   Name: Build/Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 638000410635445811
+  lastModified: 638000557568988110
   FileSizes: []
   Exists: 1
 --- !u!114 &-677377980953922767
@@ -87,10 +114,10 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD Project/Build/Desktop/Master.strings.bank
   Name: Build/Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638000410635366036
+  lastModified: 638000557569018638
   FileSizes:
   - Name: 
-    Value: 1132
+    Value: 1222
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -116,12 +143,14 @@ MonoBehaviour:
   - {fileID: 3356600906216004846}
   - {fileID: 7717486695653236979}
   - {fileID: 1505616713375876701}
+  - {fileID: 1679121357901295303}
+  - {fileID: -4717175592945247405}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2068552788536288964}
   StringsBanks:
   - {fileID: -677377980953922767}
-  cacheTime: 638000410635445811
+  cacheTime: 638000557569018638
   cacheVersion: 131592
 --- !u!114 &173596304710404503
 MonoBehaviour:
@@ -204,6 +233,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 4000
+--- !u!114 &1679121357901295303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DisintegratePlayer
+  m_EditorClassIdentifier: 
+  Path: event:/DisintegratePlayer
+  Guid:
+    Data1: 2083531055
+    Data2: 1125484016
+    Data3: -1493408080
+    Data4: 658285663
+  Banks:
+  - {fileID: -2068552788536288964}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3000
 --- !u!114 &3356600906216004846
 MonoBehaviour:
   m_ObjectHideFlags: 0
