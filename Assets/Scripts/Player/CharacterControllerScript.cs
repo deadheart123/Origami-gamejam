@@ -20,6 +20,7 @@ public class CharacterControllerScript : MonoBehaviour
     [SerializeField] private float gravityMultiplier = 1.8f;
 
     //[SerializeField] private float LookSpeed = 0.75f;
+    public bool isMoving;
 
     private void Awake()
     {
@@ -122,8 +123,18 @@ public class CharacterControllerScript : MonoBehaviour
         Gravity();
     }
 
-    void Update()
+    private void Update()
     {
+        if (movement.ReadValue<Vector2>().x != 0 || movement.ReadValue<Vector2>().y != 0)
+        {
+            isMoving = true;
+            //Debug.Log("moving");
+        }
+        else
+        {
+            isMoving = false;
+            //Debug.Log("stationary");
+        }
     }
 
     private void Pause(InputAction.CallbackContext obj)
