@@ -3,19 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public enum Animal
+{
+    CRANE,
+    SNAKE,
+    RAT,
+}
+
+public enum CollectableType
+{
+    COLLECTABLE,
+    RETURN,
+}
+
 public class OrigamiCollectable : MonoBehaviour
 {
     [SerializeField] private GameObject confetti;
     [SerializeField] private float bounceTime = 1f;
-
-    [SerializeField] private GameObject mainArea;
-    [SerializeField] private GameObject loadArea;
-    public enum LoadLevel
-    {
-        MAIN,
-        SUB
-    }
-    public LoadLevel loadLevel;
+    public Animal animal;
+    public CollectableType collectableType;
 
     private void Start()
     {
@@ -27,22 +33,18 @@ public class OrigamiCollectable : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             Instantiate(confetti, this.transform.position, Quaternion.identity);
-            AudioEventSystem.TriggerEvent("OrigamiCollected", this.gameObject);
-           // AudioEventSystem.TriggerEvent("StopGameMusic", this.gameObject); //Multiple music starts playing when origarmi collected, so whacked this in here, for now
-            this.gameObject.SetActive(false);
 
-            if(loadLevel == LoadLevel.SUB)
+            AudioEventSystem.TriggerEvent("OrigamiCollected", this.gameObject);
+            if(collectableType == CollectableType.COLLECTABLE)
+           // AudioEventSystem.TriggerEvent("StopGameMusic", this.gameObject); //Multiple music starts playing when origarmi collected, so whacked this in here, for now
             {
-                loadArea.SetActive(true);
-                loadArea.GetComponent<Area>().LoadSubArea();
-                mainArea.SetActive(false);
+                CollectableManager.Instance.GetCollectable(animal);
             }
-            else if(loadLevel == LoadLevel.MAIN)
+            else if(collectableType == CollectableType.RETURN)
             {
-                mainArea.SetActive(true);
-                loadArea.GetComponent<Area>().LoadMainArea();
-                loadArea.SetActive(false);
+                AreaManager.Instance.LoadArea(0);
             }
+            this.gameObject.SetActive(false);
         }
     }
 }
