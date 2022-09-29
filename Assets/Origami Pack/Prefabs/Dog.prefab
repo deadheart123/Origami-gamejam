@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4910571214510634}
   - component: {fileID: 33513507077923878}
   - component: {fileID: 23751139906426172}
-  - component: {fileID: -6617270635023309293}
   - component: {fileID: -2711709866258075754}
   m_Layer: 0
   m_Name: Dog
@@ -85,20 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-6617270635023309293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1010573664472510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a0b943c826653c40b35d017ec106122, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  confetti: {fileID: 418910797408679012, guid: 03239222d52278a4dbea1a834cd47f80, type: 3}
-  bounceTime: 1
 --- !u!65 &-2711709866258075754
 BoxCollider:
   m_ObjectHideFlags: 0

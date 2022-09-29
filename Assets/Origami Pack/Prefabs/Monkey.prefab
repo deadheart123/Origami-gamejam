@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4766148506136828}
   - component: {fileID: 33417253393982984}
   - component: {fileID: 23686887376270514}
-  - component: {fileID: -8011882114723561218}
   - component: {fileID: 5715588654054782019}
   m_Layer: 0
   m_Name: Monkey
@@ -85,21 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-8011882114723561218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1598459088720226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a0b943c826653c40b35d017ec106122, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  confetti: {fileID: 418910797408679012, guid: 03239222d52278a4dbea1a834cd47f80, type: 3}
-  bounceTime: 1
-  loadSceneIndex: 0
 --- !u!65 &5715588654054782019
 BoxCollider:
   m_ObjectHideFlags: 0

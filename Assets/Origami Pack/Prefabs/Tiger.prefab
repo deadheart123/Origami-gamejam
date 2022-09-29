@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4941743527270764}
   - component: {fileID: 33456304384732442}
   - component: {fileID: 23573720633088632}
-  - component: {fileID: 1946481796522924459}
   - component: {fileID: 2684191239853157078}
   m_Layer: 0
   m_Name: Tiger
@@ -85,20 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1946481796522924459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736732376848332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a0b943c826653c40b35d017ec106122, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  confetti: {fileID: 418910797408679012, guid: 03239222d52278a4dbea1a834cd47f80, type: 3}
-  bounceTime: 1
 --- !u!65 &2684191239853157078
 BoxCollider:
   m_ObjectHideFlags: 0

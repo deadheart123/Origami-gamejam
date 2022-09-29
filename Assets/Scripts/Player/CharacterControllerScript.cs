@@ -21,8 +21,6 @@ public class CharacterControllerScript : MonoBehaviour
 
     //[SerializeField] private float LookSpeed = 0.75f;
 
-    [SerializeField] private Camera mainCamera;
-
     private void Awake()
     {
         playerInputActions = new PlayerInputActions();
@@ -84,7 +82,7 @@ public class CharacterControllerScript : MonoBehaviour
 
     private void Move()
     {
-        moveVector = Quaternion.Euler(0, mainCamera.transform.eulerAngles.y, 0) * new Vector3(movement.ReadValue<Vector2>().x, 0, movement.ReadValue<Vector2>().y);
+        moveVector = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0) * new Vector3(movement.ReadValue<Vector2>().x, 0, movement.ReadValue<Vector2>().y);
 
         controller.Move(speed * Time.deltaTime * moveVector);
         controller.Move(velocity * Time.deltaTime);

@@ -7,11 +7,12 @@ public class OrigamiCollectable : MonoBehaviour
 {
     [SerializeField] private GameObject confetti;
     [SerializeField] private float bounceTime = 1f;
-    [SerializeField] private int loadSceneIndex;
+
+    [SerializeField] private GameObject mainArea;
+    [SerializeField] private GameObject loadArea;
 
     private void OnEnable()
     {
-        CollectableManager.Instance.collectablesInScene.Add(this);
         LeanTween.moveY(this.gameObject, this.transform.position.y - 2f, bounceTime).setLoopPingPong();
     }
 
@@ -19,13 +20,14 @@ public class OrigamiCollectable : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            /*Instantiate(confetti, this.transform.position, Quaternion.identity);
-            CollectableManager.Instance.GetCollectable();
-            this.gameObject.SetActive(false);*/
+            Instantiate(confetti, this.transform.position, Quaternion.identity);
             AudioEventSystem.TriggerEvent("OrigamiCollected", this.gameObject);
             AudioEventSystem.TriggerEvent("StopGameMusic", this.gameObject); //Multiple music starts playing when origarmi collected, so whacked this in here, for now
-            // Teleport to new level
-            SceneManager.LoadScene(loadSceneIndex);
+
+            loadArea.SetActive(true);
+            loadArea.GetComponent<Area>().LoadSubArea();
+
+            mainArea.SetActive(false);
         }
     }
 }

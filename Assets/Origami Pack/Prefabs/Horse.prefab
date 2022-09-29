@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4487949865502146}
   - component: {fileID: 33180134572069418}
   - component: {fileID: 23977538879356452}
-  - component: {fileID: 6473071625746168916}
   - component: {fileID: 4693320921676228296}
   m_Layer: 0
   m_Name: Horse
@@ -85,20 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6473071625746168916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1182029683073452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a0b943c826653c40b35d017ec106122, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  confetti: {fileID: 418910797408679012, guid: 03239222d52278a4dbea1a834cd47f80, type: 3}
-  bounceTime: 1
 --- !u!65 &4693320921676228296
 BoxCollider:
   m_ObjectHideFlags: 0

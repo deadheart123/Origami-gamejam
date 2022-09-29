@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4555923442477812}
   - component: {fileID: 33591373912477740}
   - component: {fileID: 23848886738545110}
-  - component: {fileID: 6497829246874723394}
   - component: {fileID: 773642008376765161}
   m_Layer: 0
   m_Name: Rooster
@@ -85,20 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6497829246874723394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1965910811585682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a0b943c826653c40b35d017ec106122, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  confetti: {fileID: 418910797408679012, guid: 03239222d52278a4dbea1a834cd47f80, type: 3}
-  bounceTime: 1
 --- !u!65 &773642008376765161
 BoxCollider:
   m_ObjectHideFlags: 0
