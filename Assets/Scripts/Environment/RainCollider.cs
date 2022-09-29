@@ -4,12 +4,24 @@ using UnityEngine;
 
 public class RainCollider : MonoBehaviour
 {
+    private float rainLifeTimeTimer = 5f;
+    void Update()
+    {
+       
+            rainLifeTimeTimer = rainLifeTimeTimer -= Time.deltaTime;
+
+            if (rainLifeTimeTimer <= 0)
+            {
+                Destroy(this.gameObject);
+            }
+        
+    }
     protected void ProcessCollision(GameObject collider)
     {
         if (collider.gameObject.CompareTag("Player"))
         {
             AudioEventSystem.TriggerEvent("RainDropHitPlayer", this.gameObject);
-            Destroy(collider.gameObject);
+            collider.gameObject.SetActive(false);
             Destroy(this.gameObject);
         }
 

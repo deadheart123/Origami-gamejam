@@ -5,14 +5,8 @@ using UnityEngine;
 public class CollectableManager : MonoBehaviour
 {
     public static CollectableManager Instance { get; private set; }
-    public List<OrigamiCollectable> craneCollectableGroup;
-    public int cranesCollected = 0;
-
-    public List<OrigamiCollectable> snakeCollectableGroup;
-    public int snakesCollected = 0;
-
-    public List<OrigamiCollectable> ratCollectableGroup;
-    public int ratsCollected = 0;
+    public List<OrigamiCollectable> collectablesInScene = new List<OrigamiCollectable>();
+    private int collectableCount = 0;
 
     private void Awake()
     {
@@ -26,33 +20,13 @@ public class CollectableManager : MonoBehaviour
         }
     }
 
-    public void GetCollectable(Animal type)
+    public void GetCollectable()
     {
-        switch (type)
+        collectableCount++;
+
+        if(collectableCount == collectablesInScene.Count)
         {
-            case Animal.CRANE:
-                cranesCollected++;
-                if(cranesCollected == craneCollectableGroup.Count)
-                {
-                    AreaManager.Instance.LoadArea(1);
-                }
-                break;
-            case Animal.SNAKE:
-                snakesCollected++;
-                if(snakesCollected == snakeCollectableGroup.Count)
-                {
-                    AreaManager.Instance.LoadArea(2);
-                }
-                break;
-            case Animal.RAT:
-                ratsCollected++;
-                if(ratsCollected == ratCollectableGroup.Count)
-                {
-                    AreaManager.Instance.LoadArea(3);
-                }
-                break;
-            default:
-                break;
+            Debug.Log("All collectables collected");
         }
     }
 }

@@ -3,25 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public enum Animal
-{
-    CRANE,
-    SNAKE,
-    RAT,
-}
-
-public enum CollectableType
-{
-    COLLECTABLE,
-    RETURN,
-}
-
 public class OrigamiCollectable : MonoBehaviour
 {
     [SerializeField] private GameObject confetti;
     [SerializeField] private float bounceTime = 1f;
-    public Animal animal;
-    public CollectableType collectableType;
+
+    [SerializeField] private GameObject mainArea;
+    [SerializeField] private GameObject loadArea;
+    public enum LoadLevel
+    {
+        MAIN,
+        SUB
+    }
+    public LoadLevel loadLevel;
 
     private void Start()
     {
@@ -33,18 +27,22 @@ public class OrigamiCollectable : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             Instantiate(confetti, this.transform.position, Quaternion.identity);
-
             AudioEventSystem.TriggerEvent("OrigamiCollected", this.gameObject);
-            if(collectableType == CollectableType.COLLECTABLE)
            // AudioEventSystem.TriggerEvent("StopGameMusic", this.gameObject); //Multiple music starts playing when origarmi collected, so whacked this in here, for now
-            {
-                CollectableManager.Instance.GetCollectable(animal);
-            }
-            else if(collectableType == CollectableType.RETURN)
-            {
-                AreaManager.Instance.LoadArea(0);
-            }
             this.gameObject.SetActive(false);
+
+            if(loadLevel == LoadLevel.SUB)
+            {
+                loadArea.SetActive(true);
+                loadArea.GetComponent<Area>().LoadSubArea();
+                mainArea.SetActive(false);
+            }
+            else if(loadLevel == LoadLevel.MAIN)
+            {
+                mainArea.SetActive(true);
+                loadArea.GetComponent<Area>().LoadMainArea();
+                loadArea.SetActive(false);
+            }
         }
     }
 }

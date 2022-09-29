@@ -22150,7 +22150,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 622178661}
-  m_LocalRotation: {x: 0.055784818, y: 0.12466296, z: -0.007020257, w: 0.9906048}
+  m_LocalRotation: {x: 0.055784818, y: 0.12466297, z: -0.007020258, w: 0.9906048}
   m_LocalPosition: {x: -2.477667, y: 2.5, z: -9.688197}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -23868,7 +23868,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 687291787}
-  m_LocalRotation: {x: 0.055784818, y: 0.12466296, z: -0.007020257, w: 0.9906048}
+  m_LocalRotation: {x: 0.055784818, y: 0.124662966, z: -0.007020258, w: 0.9906048}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -42374,6 +42374,7 @@ MonoBehaviour:
   - {fileID: 1947306582}
   - {fileID: 1113414229}
   - {fileID: 1358241286}
+  rainData: {fileID: 11400000, guid: 6d12043d673320840a001e42f6785ad2, type: 2}
   rainTimerMin: 1
   rainTimerMax: 5
 --- !u!114 &1248635408
@@ -42388,9 +42389,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 049ed3e8ea9283b4982cae7727b364f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areas: []
+  areas:
+  - {fileID: 564689034}
+  - {fileID: 1677202742}
+  - {fileID: 1255455803}
+  - {fileID: 822251605}
   currentlyActiveArea: 0
-  player: {fileID: 0}
+  player: {fileID: 572171990}
 --- !u!114 &1248635409
 MonoBehaviour:
   m_ObjectHideFlags: 0

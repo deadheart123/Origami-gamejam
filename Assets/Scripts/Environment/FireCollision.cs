@@ -9,7 +9,7 @@ public class FireCollision : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
             AudioEventSystem.TriggerEvent("PlayerDisintegrated", this.gameObject);
         }
     }

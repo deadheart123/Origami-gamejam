@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class CharacterControllerScript : MonoBehaviour
 {
     private CharacterController controller;
     private PlayerInputActions playerInputActions;
     private InputAction movement;
+    [SerializeField] private PlayerData playerData;
 
     [SerializeField] private float speed = 7.5f;
     private Vector3 velocity = new Vector3(0, 0, 0);
@@ -20,7 +22,6 @@ public class CharacterControllerScript : MonoBehaviour
     [SerializeField] private float gravityMultiplier = 1.8f;
 
     //[SerializeField] private float LookSpeed = 0.75f;
-    public bool isMoving;
 
     private void Awake()
     {
@@ -52,6 +53,7 @@ public class CharacterControllerScript : MonoBehaviour
     void Start()
     {
         controller = this.GetComponent<CharacterController>();
+        playerData.playerDead = false;
     }
 
     private void Gravity()
@@ -123,22 +125,15 @@ public class CharacterControllerScript : MonoBehaviour
         Gravity();
     }
 
-    private void Update()
+    void Update()
     {
-        if (movement.ReadValue<Vector2>().x != 0 || movement.ReadValue<Vector2>().y != 0)
-        {
-            isMoving = true;
-            //Debug.Log("moving");
-        }
-        else
-        {
-            isMoving = false;
-            //Debug.Log("stationary");
-        }
     }
 
     private void Pause(InputAction.CallbackContext obj)
     {
-        Debug.Log("PAUSE");
+        playerData.playerDead = true;
+
+
+
     }
 }

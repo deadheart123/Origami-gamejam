@@ -7,6 +7,9 @@ public class RainHazard : MonoBehaviour
     public GameObject[] rainPrefabs;
     public Transform[] spawnPoints;
     private float  rainTimer;
+   
+    
+    [SerializeField] RainData rainData;
     [SerializeField] private float rainTimerMin;
     [SerializeField] private float rainTimerMax;
 
@@ -14,7 +17,9 @@ public class RainHazard : MonoBehaviour
     void Start()
     {
         ResetSpawnTimer();
+       
     }
+    
 
     // Update is called once per frame
     void Update()
@@ -25,6 +30,8 @@ public class RainHazard : MonoBehaviour
         {
             SpawnRain();
         }
+
+      
     }
 
     private void SpawnRain()
@@ -32,13 +39,17 @@ public class RainHazard : MonoBehaviour
         int rainIndexToSpawn = Random.Range(0, 2);
         int positionIndexToSpawn = Random.Range(0, 30);
 
-        Instantiate(rainPrefabs[rainIndexToSpawn], spawnPoints[positionIndexToSpawn].position, Quaternion.identity);
+        Instantiate(rainData.rainPrefabs[rainIndexToSpawn], rainData.spawnPoints[positionIndexToSpawn].position, Quaternion.identity);
+       
         ResetSpawnTimer();
     }
 
+   
+
     void ResetSpawnTimer()
     {
-        rainTimer = Random.Range(rainTimerMin, rainTimerMax);
+        rainTimer = Random.Range(rainData.rainTimerMin, rainData.rainTimerMax);
     }
+
 
 }

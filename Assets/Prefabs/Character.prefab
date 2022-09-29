@@ -209,10 +209,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50165652adf6bc4419dd551f3cae69d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerFootsteps: {fileID: 3613267506978275924}
+  playerData: {fileID: 11400000, guid: b7f2fd3301ced35428498c0398d0d81c, type: 2}
   speed: 7.5
-  velocity: {x: 0, y: 0, z: 0}
-  isGrounded: 1
   groundCheckObject: {fileID: 3330110517531191940}
   JumpHeight: 1
   gravityMultiplier: 1.8
